@@ -9,142 +9,128 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .hero-gradient { background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent), radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.15), transparent); }
-        .text-gradient { background: linear-gradient(135deg, #60A5FA 0%, #C084FC 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .skill-card:hover { border-color: #3B82F6; transform: translateY(-2px); transition: all 0.3s ease; }
+        
+        /* Premium Background Effect */
+        .bg-mesh {
+            background-color: #020617;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
+        }
+
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #60A5FA 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-btn-primary {
+            background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
-<body class="bg-[#020617] text-slate-300 selection:bg-blue-500/30">
+<body class="bg-mesh text-slate-300 selection:bg-blue-500/30">
 
-    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-xl font-extrabold tracking-tighter text-white">SAMPATH <span class="text-blue-500 underline decoration-2 underline-offset-4">RUWAN</span></div>
-        <div class="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider">
-            <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
-            <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-            <a href="https://github.com/ruwan-dev/ruwan.github.io/raw/main/sampath%20ruwan%20pathirana.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full transition flex items-center shadow-lg shadow-blue-600/20">
-                <i class="fas fa-file-download mr-2"></i> Download CV
+    <nav class="fixed w-full z-50 glass-nav py-4 px-6 md:px-16 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">S</div>
+            <span class="text-xl font-bold tracking-tighter text-white">RUWAN<span class="text-blue-500">.</span></span>
+        </div>
+        <div class="hidden md:flex items-center space-x-10 text-[12px] font-bold uppercase tracking-[2px]">
+            <a href="#experience" class="text-slate-400 hover:text-white transition">Experience</a>
+            <a href="#skills" class="text-slate-400 hover:text-white transition">Expertise</a>
+            <a href="https://github.com/ruwan-dev/ruwan.github.io/raw/main/sampath%20ruwan%20pathirana.pdf" download class="hero-btn-primary text-white px-6 py-2.5 rounded-full transition flex items-center text-[11px]">
+                <i class="fas fa-cloud-download-alt mr-2"></i> DOWNLOAD CV
             </a>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 hero-gradient pt-20">
-        <div class="absolute inset-0 overflow-hidden -z-10">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px]"></div>
-        </div>
-        
-        <div class="mb-8 p-1 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 shadow-2xl">
-            <img src="https://github.com/ruwan-dev.png" class="w-32 h-32 rounded-full border-4 border-[#020617]" alt="Sampath Ruwan">
-        </div>
-
-        <h1 class="text-5xl md:text-8xl font-black text-white text-center tracking-tight mb-6">
-            Senior <span class="text-gradient">Software Engineer</span>
-        </h1>
-        
-        <p class="text-lg md:text-xl text-slate-400 max-w-3xl text-center leading-relaxed mb-10">
-            6+ years of expertise in designing and deploying scalable enterprise solutions using **C#, .NET Core, and Angular** with advanced **Azure Cloud** integration.
-        </p>
-
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#experience" class="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition shadow-xl">Explore Projects</a>
-            <a href="mailto:sampathruwan20@gmail.com" class="glass text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/5 transition border border-white/10">Get In Touch</a>
-        </div>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 shadow-sm">
-            <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-layer-group"></i></div>
-            <h3 class="text-white font-bold text-lg mb-2">Architecture</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Expert in **Clean Architecture** and **Domain-Driven Design (DDD)** for robust backend systems.</p>
-        </div>
-        <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 shadow-sm">
-            <div class="text-purple-500 text-3xl mb-4"><i class="fas fa-cloud"></i></div>
-            <h3 class="text-white font-bold text-lg mb-2">Cloud Native</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Extensive experience with **Azure Functions, Service Bus, and App Services**.</p>
-        </div>
-        <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 shadow-sm">
-            <div class="text-cyan-500 text-3xl mb-4"><i class="fas fa-code-merge"></i></div>
-            <h3 class="text-white font-bold text-lg mb-2">DevOps Culture</h3>
-            <p class="text-sm text-slate-500 leading-relaxed">Mastering **CI/CD pipeline automation** using **Azure DevOps** for seamless deployments.</p>
-        </div>
-    </section>
-
-    <section id="experience" class="py-24 max-w-5xl mx-auto px-6">
-        <h2 class="text-4xl font-extrabold text-white mb-16 tracking-tight flex items-center">
-            Career Journey <span class="ml-4 h-px flex-grow bg-slate-800"></span>
-        </h2>
-
-        <div class="space-y-16">
-            <div class="relative pl-10 border-l-2 border-slate-800 hover:border-blue-500 transition-colors duration-500">
-                <div class="absolute -left-[11px] top-0 w-5 h-5 bg-blue-500 rounded-full border-4 border-[#020617] shadow-lg shadow-blue-500/50"></div>
-                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                    <h3 class="text-2xl font-bold text-white uppercase tracking-wide">Senior Software Engineer</h3>
-                    <span class="text-blue-500 font-mono text-sm bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">2024 - Present</span>
+    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            
+            <div class="text-center md:text-left z-10">
+                <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">Available for New Projects</span>
                 </div>
-                <p class="text-xl font-semibold text-slate-200 mb-4">JRC Software Pvt Ltd</p>
-                <div class="grid md:grid-cols-2 gap-6 text-slate-400 text-sm">
-                    <ul class="space-y-3 list-none">
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Leading development for **Invoice Automate** and **Bricks & Agent**.</li>
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Implementing **Azure Service Bus** and **Functions** for async processing.</li>
-                    </ul>
-                    <ul class="space-y-3 list-none">
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Mentoring juniors and ensuring high **code quality standards**.</li>
-                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Architecting solutions using **Domain-Driven Design**.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="relative pl-10 border-l-2 border-slate-800">
-                <div class="absolute -left-[11px] top-0 w-5 h-5 bg-slate-800 rounded-full border-4 border-[#020617]"></div>
-                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                    <h3 class="text-2xl font-bold text-white uppercase tracking-wide">Software Engineer</h3>
-                    <span class="text-slate-500 font-mono text-sm bg-slate-800 px-3 py-1 rounded-full">2022 - 2024</span>
-                </div>
-                <p class="text-xl font-semibold text-slate-200 mb-4">MIHCM Pvt Ltd</p>
-                <p class="text-slate-400 text-sm mb-4 max-w-2xl">
-                    Focused on enterprise HR solutions. Extensive work with **Microsoft Graph API**, **Azure Marketplace integration**, and scalable cloud workflows.
+                
+                <h1 class="text-5xl md:text-8xl font-black text-white leading-[1.1] mb-6">
+                    Building <span class="text-gradient">Scalable</span> Cloud Systems.
+                </h1>
+                
+                <p class="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+                    I am <span class="text-white font-semibold">Sampath Ruwan</span>, a Senior Software Engineer with 6+ years of mastery in <span class="text-blue-400">.NET Core</span>, <span class="text-purple-400">Azure</span>, and <span class="text-cyan-400">Angular</span>.
                 </p>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="py-24 bg-slate-900/20 rounded-[50px]">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-center text-3xl font-bold text-white mb-20 uppercase tracking-widest">Tech Stack & Expertise</h2>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
-                <div class="p-8 glass rounded-3xl text-center skill-card">
-                    <i class="fab fa-microsoft text-4xl text-blue-400 mb-4"></i>
-                    <p class="font-bold text-white">.NET Core</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-5">
+                    <a href="#experience" class="hero-btn-primary text-white px-10 py-4 rounded-2xl font-bold transition hover:scale-105 active:scale-95">
+                        Explore Portfolio
+                    </a>
+                    <a href="https://github.com/ruwan-dev" target="_blank" class="bg-white/5 hover:bg-white/10 text-white px-10 py-4 rounded-2xl font-bold border border-white/10 transition backdrop-blur-sm">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
                 </div>
-                <div class="p-8 glass rounded-3xl text-center skill-card">
-                    <i class="fab fa-angular text-4xl text-red-500 mb-4"></i>
-                    <p class="font-bold text-white">Angular</p>
-                </div>
-                <div class="p-8 glass rounded-3xl text-center skill-card">
-                    <i class="fas fa-cloud text-4xl text-cyan-400 mb-4"></i>
-                    <p class="font-bold text-white">Azure</p>
-                </div>
-                <div class="p-8 glass rounded-3xl text-center skill-card">
-                    <i class="fas fa-database text-4xl text-blue-300 mb-4"></i>
-                    <p class="font-bold text-white">SQL Server</p>
-                </div>
-                <div class="p-8 glass rounded-3xl text-center skill-card">
-                    <i class="fab fa-react text-4xl text-cyan-400 mb-4"></i>
-                    <p class="font-bold text-white">React JS</p>
+
+                <div class="mt-12 flex items-center justify-center md:justify-start space-x-8">
+                    <div class="text-center md:text-left">
+                        <p class="text-2xl font-bold text-white">6+</p>
+                        <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Years Exp.</p>
+                    </div>
+                    <div class="w-px h-8 bg-slate-800"></div>
+                    <div class="text-center md:text-left">
+                        <p class="text-2xl font-bold text-white">Azure</p>
+                        <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Cloud Expert</p>
+                    </div>
+                    <div class="w-px h-8 bg-slate-800"></div>
+                    <div class="text-center md:text-left">
+                        <p class="text-2xl font-bold text-white">Enterprise</p>
+                        <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Solutions</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="relative flex justify-center items-center">
+                <div class="absolute w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[100px] floating"></div>
+                <div class="relative p-2 rounded-[40px] bg-gradient-to-tr from-blue-500/20 to-purple-500/20 border border-white/10 shadow-2xl">
+                    <img src="https://github.com/ruwan-dev.png" class="w-[280px] md:w-[350px] rounded-[32px] grayscale hover:grayscale-0 transition duration-700" alt="Sampath Ruwan">
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-[#0f172a] border border-white/10 p-5 rounded-3xl shadow-2xl floating">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-code text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold text-sm">Clean Code</p>
+                                <p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Architecture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-
-    <footer class="py-20 text-center border-t border-slate-900">
-        <div class="flex justify-center space-x-10 mb-10 text-2xl">
-            <a href="mailto:sampathruwan20@gmail.com" class="hover:text-blue-500 transition"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/ruwan-dev" target="_blank" class="hover:text-white transition"><i class="fab fa-github"></i></a>
-            <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <p class="text-slate-600 text-sm font-medium uppercase tracking-[0.2em]">Designed for Performance | Sampath Ruwan Pathirana © 2026</p>
-    </footer>
 
 </body>
 </html>
