@@ -3,103 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruwan Pathirana | Portfolio</title>
+    <title>Sampath Ruwan Pathirana | Senior Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-5px); border-color: #38bdf8; transition: all 0.3s ease; }
     </style>
 </head>
-<body class="bg-[#0f172a] text-slate-200 leading-relaxed">
+<body class="bg-[#020617] text-slate-300">
 
-    <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
-        <span class="text-xl font-bold gradient-text">RP.DEV</span>
-        <div class="space-x-6 text-sm font-medium">
-            <a href="#about" class="hover:text-blue-400 transition">About</a>
-            <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-            <a href="mailto:ruwan@jrcsoftware.com" class="bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-700 transition">Contact</a>
+    <nav class="fixed w-full z-50 glass py-4 px-8 flex justify-between items-center">
+        <span class="text-xl font-bold tracking-tighter text-white">SAMPATH <span class="text-blue-500">RUWAN</span></span>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#about" class="hover:text-blue-400">About</a>
+            <a href="#experience" class="hover:text-blue-400">Experience</a>
+            <a href="#skills" class="hover:text-blue-400">Skills</a>
+            <a href="https://github.com/ruwan-dev/ruwan.github.io/raw/main/sampath_ruwan_pathirana.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full transition flex items-center">
+                <i class="fas fa-download mr-2"></i> Download CV
+            </a>
         </div>
     </nav>
 
-    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
-        <h1 class="text-5xl md:text-7xl font-bold mb-4">Hi, I'm <span class="gradient-text">Ruwan Pathirana</span></h1>
-        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
-            Full Stack Developer specializing in high-performance applications with **.NET Core, Angular, and Flutter**.
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="mb-6 relative">
+            <img src="https://github.com/ruwan-dev.png" class="w-32 h-32 rounded-full border-4 border-blue-500/30 p-1 shadow-2xl shadow-blue-500/20" alt="Profile">
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
+            Senior <span class="gradient-text">Software Engineer</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed">
+            6+ years of experience in building scalable enterprise web applications using **C#, .NET Core, and Angular** with a focus on **Azure Cloud Services**[cite: 5, 6].
         </p>
-        <div class="flex space-x-4">
-            <a href="#projects" class="border border-blue-500 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500/10 transition">View My Work</a>
-            <a href="https://github.com/ruwan-dev" target="_blank" class="bg-slate-800 px-6 py-3 rounded-lg hover:bg-slate-700 transition"><i class="fab fa-github mr-2"></i>GitHub</a>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="mailto:sampathruwan20@gmail.com" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-xl transition font-semibold border border-slate-700">
+                Contact Me
+            </a>
+            <a href="#experience" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl transition font-semibold shadow-lg shadow-blue-900/20">
+                View Experience
+            </a>
         </div>
     </section>
 
-    <section id="about" class="py-24 max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 flex items-center"><span class="text-blue-500 mr-2">01.</span> About Me</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <p class="text-slate-400 text-lg">
-                I am a Software Developer at **JRC Software**. I enjoy solving complex problems through clean and efficient code. 
-                Whether it's building a cross-platform mobile app using **Flutter** or architecting backend systems with **C# and SQL Server**, 
-                I focus on creating seamless user experiences.
-            </p>
-            <div class="glass p-8 rounded-2xl text-center">
-                <p class="text-sm uppercase tracking-widest text-blue-400 mb-2 font-semibold">Current Role</p>
-                <p class="text-xl font-bold text-white">Software Developer</p>
-                <p class="text-slate-500">JRC Software</p>
+    <section class="py-10 max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="glass p-6 rounded-2xl">
+            <p class="text-3xl font-bold text-white">6+</p>
+            <p class="text-xs uppercase tracking-widest text-slate-500 mt-1">Years Experience </p>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+            <p class="text-3xl font-bold text-white">Azure</p>
+            <p class="text-xs uppercase tracking-widest text-slate-500 mt-1">Cloud Expert </p>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+            <p class="text-3xl font-bold text-white">Clean</p>
+            <p class="text-xs uppercase tracking-widest text-slate-500 mt-1">Architecture [cite: 7]</p>
+        </div>
+        <div class="glass p-6 rounded-2xl">
+            <p class="text-3xl font-bold text-white">CI/CD</p>
+            <p class="text-xs uppercase tracking-widest text-slate-500 mt-1">Automation [cite: 8]</p>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+            <span class="w-12 h-[2px] bg-blue-500 mr-4"></span> Professional Experience
+        </h2>
+        
+        <div class="space-y-12">
+            <div class="relative pl-8 border-l border-slate-800">
+                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1 shadow-lg shadow-blue-500/50"></div>
+                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Senior Software Engineer</h3>
+                        <p class="text-blue-400 font-medium">JRC Software Pvt Ltd [cite: 17, 18]</p>
+                    </div>
+                    <p class="text-slate-500 text-sm mt-1">Sept 2024 - Present [cite: 19]</p>
+                </div>
+                <ul class="text-slate-400 space-y-2 text-sm list-disc ml-4">
+                    <li>Led end-to-end development of enterprise applications using Clean Architecture[cite: 20, 22].</li>
+                    <li>Mentored junior developers and ensured high code quality through reviews[cite: 23].</li>
+                    <li>Implemented CI/CD pipelines and integrated secure Azure services[cite: 24].</li>
+                </ul>
+            </div>
+
+            <div class="relative pl-8 border-l border-slate-800">
+                <div class="absolute w-4 h-4 bg-slate-700 rounded-full -left-[9px] top-1"></div>
+                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Software Engineer</h3>
+                        <p class="text-blue-400 font-medium">MIHCM Pvt Ltd [cite: 27, 28]</p>
+                    </div>
+                    <p class="text-slate-500 text-sm mt-1">April 2022 - Sept 2024 [cite: 29]</p>
+                </div>
+                <ul class="text-slate-400 space-y-2 text-sm list-disc ml-4">
+                    <li>Built cloud-integrated solutions using Azure Graph API and Marketplace API[cite: 31, 33].</li>
+                    <li>Integrated Google APIs for seamless data exchange and automation[cite: 32].</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24 bg-[#1e293b]/50">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-16">My Tech Stack</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="p-6 glass rounded-xl hover:scale-105 transition"><i class="fab fa-microsoft text-4xl mb-4 text-blue-400"></i><p>C# / .NET</p></div>
-                <div class="p-6 glass rounded-xl hover:scale-105 transition"><i class="fas fa-mobile-alt text-4xl mb-4 text-cyan-400"></i><p>Flutter / Dart</p></div>
-                <div class="p-6 glass rounded-xl hover:scale-105 transition"><i class="fab fa-angular text-4xl mb-4 text-red-500"></i><p>Angular</p></div>
-                <div class="p-6 glass rounded-xl hover:scale-105 transition"><i class="fas fa-database text-4xl mb-4 text-yellow-500"></i><p>SQL Server</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-24 max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12"><span class="text-blue-500 mr-2">02.</span> Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition group">
-                <div class="text-blue-400 mb-4 flex justify-between">
-                    <i class="far fa-folder text-3xl"></i>
-                    <i class="fab fa-github text-xl cursor-pointer"></i>
+    <section id="skills" class="py-24 bg-slate-900/30">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 text-center">Technical Toolbox [cite: 10]</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass p-6 rounded-xl text-center card-hover">
+                    <i class="fab fa-microsoft text-3xl text-blue-400 mb-3"></i>
+                    <p class="font-semibold text-white">.NET Core [cite: 11]</p>
                 </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400">Flutter Booking App</h3>
-                <p class="text-slate-400 text-sm mb-4">A high-performance mobile application featuring real-time booking and error handling.</p>
-                <div class="flex space-x-3 text-xs font-mono text-slate-500 uppercase">
-                    <span>Flutter</span><span>Firebase</span><span>API</span>
+                <div class="glass p-6 rounded-xl text-center card-hover">
+                    <i class="fab fa-angular text-3xl text-red-500 mb-3"></i>
+                    <p class="font-semibold text-white">Angular [cite: 11]</p>
                 </div>
-            </div>
-            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition group">
-                <div class="text-blue-400 mb-4 flex justify-between">
-                    <i class="far fa-folder text-3xl"></i>
-                    <i class="fab fa-github text-xl cursor-pointer"></i>
+                <div class="glass p-6 rounded-xl text-center card-hover">
+                    <i class="fas fa-cloud text-3xl text-cyan-400 mb-3"></i>
+                    <p class="font-semibold text-white">Azure [cite: 11]</p>
                 </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400">Enterprise SQL Systems</h3>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400">Enterprise SQL Systems</h3>
-                <p class="text-slate-400 text-sm mb-4">Designing and optimizing large-scale SQL Server databases for enterprise applications.</p>
-                <div class="flex space-x-3 text-xs font-mono text-slate-500 uppercase">
-                    <span>SQL Server</span><span>.NET</span>
+                <div class="glass p-6 rounded-xl text-center card-hover">
+                    <i class="fas fa-database text-3xl text-indigo-400 mb-3"></i>
+                    <p class="font-semibold text-white">SQL Server [cite: 12]</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-800 text-center">
-        <p class="text-slate-500 text-sm mb-4">Handcrafted by Ruwan | Built with Tailwind CSS</p>
-        <div class="flex justify-center space-x-6">
-            <a href="mailto:ruwan@jrcsoftware.com" class="hover:text-blue-400"><i class="fas fa-envelope"></i></a>
+    <footer class="py-20 border-t border-slate-900 text-center">
+        <p class="text-slate-500 mb-6">Let's connect and build something extraordinary.</p>
+        <div class="flex justify-center space-x-6 text-2xl">
+            <a href="mailto:sampathruwan20@gmail.com" class="hover:text-blue-400"><i class="fas fa-envelope"></i></a>
             <a href="https://github.com/ruwan-dev" target="_blank" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
             <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
         </div>
+        <p class="mt-10 text-xs text-slate-600 uppercase tracking-widest">© 2026 Sampath Ruwan Pathirana</p>
     </footer>
 
 </body>
