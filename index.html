@@ -1,136 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sampath Ruwan | Senior Software Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        
-        /* Premium Background Effect */
-        .bg-mesh {
-            background-color: #020617;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.1) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
-        }
+<section id="experience" class="py-24 max-w-5xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-white mb-16 tracking-tight flex items-center">
+            Professional Journey <span class="ml-4 h-px flex-grow bg-slate-800"></span>
+        </h2>
 
-        .glass-nav {
-            background: rgba(2, 6, 23, 0.7);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, #60A5FA 0%, #A855F7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-btn-primary {
-            background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
-        }
-
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-    </style>
-</head>
-<body class="bg-mesh text-slate-300 selection:bg-blue-500/30">
-
-    <nav class="fixed w-full z-50 glass-nav py-4 px-6 md:px-16 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">S</div>
-            <span class="text-xl font-bold tracking-tighter text-white">RUWAN<span class="text-blue-500">.</span></span>
-        </div>
-        <div class="hidden md:flex items-center space-x-10 text-[12px] font-bold uppercase tracking-[2px]">
-            <a href="#experience" class="text-slate-400 hover:text-white transition">Experience</a>
-            <a href="#skills" class="text-slate-400 hover:text-white transition">Expertise</a>
-            <a href="https://github.com/ruwan-dev/ruwan.github.io/raw/main/sampath%20ruwan%20pathirana.pdf" download class="hero-btn-primary text-white px-6 py-2.5 rounded-full transition flex items-center text-[11px]">
-                <i class="fas fa-cloud-download-alt mr-2"></i> DOWNLOAD CV
-            </a>
-        </div>
-    </nav>
-
-    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            
-            <div class="text-center md:text-left z-10">
-                <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                    </span>
-                    <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">Available for New Projects</span>
+        <div class="space-y-20">
+            <div class="relative pl-10 border-l-2 border-blue-500/30 hover:border-blue-500 transition-colors duration-500">
+                <div class="absolute -left-[11px] top-0 w-5 h-5 bg-blue-500 rounded-full border-4 border-[#020617] shadow-lg shadow-blue-500/50"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-wide">Senior Software Engineer</h3>
+                    <span class="text-blue-500 font-mono text-sm bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">2024 - Present</span>
                 </div>
-                
-                <h1 class="text-5xl md:text-8xl font-black text-white leading-[1.1] mb-6">
-                    Building <span class="text-gradient">Scalable</span> Cloud Systems.
-                </h1>
-                
-                <p class="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
-                    I am <span class="text-white font-semibold">Sampath Ruwan</span>, a Senior Software Engineer with 6+ years of mastery in <span class="text-blue-400">.NET Core</span>, <span class="text-purple-400">Azure</span>, and <span class="text-cyan-400">Angular</span>.
+                <p class="text-xl font-semibold text-slate-200 mb-4">JRC Software Pvt Ltd</p>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                    Leading end-to-end development of enterprise applications like **Invoice Automate** and **Bricks & Agent**. 
+                    Architecting systems using **Clean Architecture** and **Domain-Driven Design (DDD)**.
                 </p>
-
-                <div class="flex flex-wrap justify-center md:justify-start gap-5">
-                    <a href="#experience" class="hero-btn-primary text-white px-10 py-4 rounded-2xl font-bold transition hover:scale-105 active:scale-95">
-                        Explore Portfolio
-                    </a>
-                    <a href="https://github.com/ruwan-dev" target="_blank" class="bg-white/5 hover:bg-white/10 text-white px-10 py-4 rounded-2xl font-bold border border-white/10 transition backdrop-blur-sm">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
-
-                <div class="mt-12 flex items-center justify-center md:justify-start space-x-8">
-                    <div class="text-center md:text-left">
-                        <p class="text-2xl font-bold text-white">6+</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Years Exp.</p>
-                    </div>
-                    <div class="w-px h-8 bg-slate-800"></div>
-                    <div class="text-center md:text-left">
-                        <p class="text-2xl font-bold text-white">Azure</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Cloud Expert</p>
-                    </div>
-                    <div class="w-px h-8 bg-slate-800"></div>
-                    <div class="text-center md:text-left">
-                        <p class="text-2xl font-bold text-white">Enterprise</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Solutions</p>
-                    </div>
+                <div class="flex flex-wrap gap-2 text-[10px] font-bold text-blue-400 uppercase">
+                    <span class="bg-blue-500/5 border border-blue-500/20 px-2 py-1 rounded">Azure Functions</span>
+                    <span class="bg-blue-500/5 border border-blue-500/20 px-2 py-1 rounded">Service Bus</span>
+                    <span class="bg-blue-500/5 border border-blue-500/20 px-2 py-1 rounded">.NET 8</span>
                 </div>
             </div>
 
-            <div class="relative flex justify-center items-center">
-                <div class="absolute w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[100px] floating"></div>
-                <div class="relative p-2 rounded-[40px] bg-gradient-to-tr from-blue-500/20 to-purple-500/20 border border-white/10 shadow-2xl">
-                    <img src="https://github.com/ruwan-dev.png" class="w-[280px] md:w-[350px] rounded-[32px] grayscale hover:grayscale-0 transition duration-700" alt="Sampath Ruwan">
-                    
-                    <div class="absolute -bottom-6 -left-6 bg-[#0f172a] border border-white/10 p-5 rounded-3xl shadow-2xl floating">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center">
-                                <i class="fas fa-code text-blue-500 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-white font-bold text-sm">Clean Code</p>
-                                <p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Architecture</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="relative pl-10 border-l-2 border-slate-800 hover:border-purple-500 transition-colors duration-500">
+                <div class="absolute -left-[11px] top-0 w-5 h-5 bg-purple-500 rounded-full border-4 border-[#020617]"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-wide">Software Engineer</h3>
+                    <span class="text-purple-400 font-mono text-sm bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">2022 - 2024</span>
                 </div>
+                <p class="text-xl font-semibold text-slate-200 mb-4">MIHCM Pvt Ltd</p>
+                <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4">
+                    <li>Developed scalable cloud-integrated HR solutions using **Azure Graph API**.</li>
+                    <li>Integrated **Google APIs** for seamless data automation and exchange.</li>
+                    <li>Built features for **MIHCM SMART HR** using Angular and Azure services.</li>
+                </ul>
             </div>
 
+            <div class="relative pl-10 border-l-2 border-slate-800 hover:border-cyan-500 transition-colors duration-500">
+                <div class="absolute -left-[11px] top-0 w-5 h-5 bg-cyan-500 rounded-full border-4 border-[#020617]"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-wide">Associate Software Engineer</h3>
+                    <span class="text-cyan-400 font-mono text-sm bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">2019 - 2022</span>
+                </div>
+                <p class="text-xl font-semibold text-slate-200 mb-4">Synapsys Pvt Ltd</p>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                    Contributed to high-performance Fintech and Banking applications. Key projects include **DFCC Virtual Wallet** and **MAB**.
+                </p>
+                <ul class="text-slate-400 text-sm space-y-2 list-disc ml-4 mb-4">
+                    <li>Implemented asynchronous communication with **RabbitMQ** and caching with **Redis**.</li>
+                    <li>Built dynamic frontends using **React JS** for real-time user experiences.</li>
+                    <li>Designed backend services and APIs using **.NET Core** and **.NET Framework**.</li>
+                </ul>
+                <div class="flex flex-wrap gap-2 text-[10px] font-bold text-cyan-400 uppercase">
+                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">React JS</span>
+                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">RabbitMQ</span>
+                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">Redis</span>
+                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">Fintech</span>
+                </div>
+            </div>
         </div>
     </section>
-
-</body>
-</html>
