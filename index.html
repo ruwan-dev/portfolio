@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; background-color: #020617; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; background-color: #020617; overflow-x: hidden; }
         
         .bg-mesh {
             background-image: 
@@ -28,11 +28,32 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .skill-card:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
+        /* Floating Animation for Tech Bubbles */
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            33% { transform: translate(15px, -25px); }
+            66% { transform: translate(-10px, -15px); }
+            100% { transform: translate(0, 0); }
         }
+
+        .bubble {
+            animation: float 6s ease-in-out infinite;
+            transition: all 0.5s ease;
+        }
+
+        .bubble:hover {
+            animation-play-state: paused;
+            border-color: #3B82F6;
+            background: rgba(59, 130, 246, 0.1);
+            transform: scale(1.1) !important;
+            z-index: 20;
+        }
+
+        /* Delayed animations for natural look */
+        .d-1 { animation-duration: 7s; animation-delay: 0.5s; }
+        .d-2 { animation-duration: 5s; animation-delay: 1.2s; }
+        .d-3 { animation-duration: 8s; animation-delay: 0.2s; }
+        .d-4 { animation-duration: 6s; animation-delay: 1.8s; }
     </style>
 </head>
 <body class="text-slate-300 bg-mesh selection:bg-blue-500/30">
@@ -42,33 +63,74 @@
         <div class="hidden md:flex items-center space-x-8 text-[11px] font-bold uppercase tracking-widest">
             <a href="#about" class="hover:text-blue-400 transition">About</a>
             <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
-            <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+            <a href="#skills" class="hover:text-blue-400 transition">Tech Stack</a>
             <a href="https://github.com/ruwan-dev/ruwan.github.io/raw/main/sampath%20ruwan%20pathirana.pdf" download class="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">
                 <i class="fas fa-file-download mr-2"></i> Download CV
             </a>
         </div>
     </nav>
 
-    <section id="about" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 text-center">
-        <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6">Senior Software Engineer</div>
-        <h1 class="text-5xl md:text-8xl font-black text-white tracking-tight mb-6 leading-none">
-            Sampath <span class="text-gradient">Ruwan</span>
+    <section id="about" class="min-h-[85vh] flex flex-col justify-center items-center px-6 pt-24 text-center">
+        <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6 tracking-widest">Senior Software Engineer</div>
+        <h1 class="text-6xl md:text-9xl font-black text-white tracking-tight mb-6 leading-none">
+            Sampath <br><span class="text-gradient">Ruwan</span>
         </h1>
         <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
-            Senior Software Engineer with over 6 years of experience in designing and developing scalable enterprise-level applications. Expert in .NET Core, Azure Cloud, and Angular.
+            Senior Software Engineer with over 6 years of experience in designing and developing scalable enterprise-level applications.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
             <a href="#experience" class="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition shadow-xl">Professional Journey</a>
-            <a href="mailto:sampathruwan20@gmail.com" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/5 transition border border-white/10">Get In Touch</a>
+            <a href="mailto:sampathruwan20@gmail.com" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/5 transition border border-white/10">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative min-h-[600px] overflow-hidden">
+        <h2 class="text-center text-xs font-bold text-slate-500 uppercase tracking-[0.5em] mb-20 italic">Technical Expertise</h2>
+        
+        <div class="max-w-6xl mx-auto px-6 relative h-[400px]">
+            <div class="bubble d-1 absolute top-0 left-[10%] glass p-8 rounded-full flex flex-col items-center justify-center w-40 h-40 shadow-xl border-blue-500/20">
+                <i class="fab fa-microsoft text-3xl text-blue-400 mb-2"></i>
+                <span class="text-xs font-bold text-white uppercase">.NET Core</span>
+            </div>
+
+            <div class="bubble d-2 absolute top-20 left-[35%] glass p-10 rounded-full flex flex-col items-center justify-center w-48 h-48 shadow-2xl border-cyan-400/20">
+                <i class="fas fa-cloud text-4xl text-cyan-400 mb-2"></i>
+                <span class="text-sm font-bold text-white uppercase tracking-wider">Azure Cloud</span>
+            </div>
+
+            <div class="bubble d-3 absolute top-0 right-[25%] glass p-8 rounded-full flex flex-col items-center justify-center w-36 h-36 border-red-500/20">
+                <i class="fab fa-angular text-3xl text-red-500 mb-2"></i>
+                <span class="text-[10px] font-bold text-white uppercase">Angular</span>
+            </div>
+
+            <div class="bubble d-4 absolute bottom-10 left-[20%] glass p-7 rounded-full flex flex-col items-center justify-center w-32 h-32 border-orange-400/20">
+                <i class="fas fa-database text-2xl text-orange-400 mb-2"></i>
+                <span class="text-[10px] font-bold text-white uppercase">SQL Server</span>
+            </div>
+
+            <div class="bubble d-1 absolute bottom-0 right-[35%] glass p-9 rounded-full flex flex-col items-center justify-center w-44 h-44 border-cyan-300/20">
+                <i class="fab fa-react text-4xl text-cyan-300 mb-2"></i>
+                <span class="text-[10px] font-bold text-white uppercase">React JS</span>
+            </div>
+
+            <div class="bubble d-2 absolute top-40 right-[10%] glass p-6 rounded-full flex flex-col items-center justify-center w-32 h-32 border-orange-600/20">
+                <i class="fas fa-paper-plane text-xl text-orange-600 mb-1"></i>
+                <span class="text-[9px] font-bold text-white uppercase tracking-tighter">RabbitMQ</span>
+            </div>
+
+            <div class="bubble d-3 absolute bottom-20 right-[15%] glass p-5 rounded-full flex flex-col items-center justify-center w-28 h-28 border-red-600/20">
+                <i class="fas fa-bolt text-xl text-red-600 mb-1"></i>
+                <span class="text-[9px] font-bold text-white uppercase">Redis</span>
+            </div>
         </div>
     </section>
 
     <section id="experience" class="py-24 max-w-5xl mx-auto px-6">
-        <h2 class="text-4xl font-extrabold text-white mb-16 tracking-tight flex items-center text-center justify-center md:justify-start">
-            Career Timeline <span class="hidden md:block ml-4 h-px flex-grow bg-slate-800"></span>
+        <h2 class="text-4xl font-extrabold text-white mb-20 tracking-tight flex items-center">
+            Professional Journey <span class="ml-4 h-px flex-grow bg-slate-800"></span>
         </h2>
 
-        <div class="space-y-20">
+        <div class="space-y-24">
             <div class="relative pl-10 border-l-2 border-blue-500/30 hover:border-blue-500 transition-colors duration-500">
                 <div class="absolute -left-[11px] top-0 w-5 h-5 bg-blue-500 rounded-full border-4 border-[#020617] shadow-lg shadow-blue-500/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
@@ -77,13 +139,8 @@
                 </div>
                 <p class="text-lg font-semibold text-blue-400 mb-4 italic">JRC Software Pvt Ltd</p>
                 <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                    Led end-to-end development of enterprise features. Implemented Clean Architecture and Domain-Driven Design (DDD) to build robust backend systems for projects like Invoice Automate and Bricks & Agent.
+                    Led development of enterprise solutions like Invoice Automate and Bricks & Agent. Implemented Clean Architecture and Domain-Driven Design (DDD) to build robust backend systems.
                 </p>
-                <div class="flex flex-wrap gap-2 text-[10px] font-bold text-blue-400 uppercase">
-                    <span class="bg-blue-500/5 border border-blue-500/20 px-2 py-1 rounded">Azure Functions</span>
-                    <span class="bg-blue-500/5 border border-blue-500/20 px-2 py-1 rounded">Service Bus</span>
-                    <span class="bg-blue-500/5 border border-blue-500/20 px-2 py-1 rounded">.NET 8</span>
-                </div>
             </div>
 
             <div class="relative pl-10 border-l-2 border-slate-800 hover:border-purple-500 transition-colors duration-500">
@@ -94,13 +151,8 @@
                 </div>
                 <p class="text-lg font-semibold text-purple-400 mb-4 italic">MIHCM Pvt Ltd</p>
                 <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                    Designed and integrated Azure Marketplace product subscription features. Built scalable cloud-integrated solutions for MIHCM SMART HR using Microsoft Graph API and Google APIs.
+                    Built cloud-integrated HR solutions (MIHCM SMART HR). Integrated Microsoft Graph API and Google APIs for seamless data automation.
                 </p>
-                <div class="flex flex-wrap gap-2 text-[10px] font-bold text-purple-400 uppercase">
-                    <span class="bg-purple-500/5 border border-purple-500/10 px-2 py-1 rounded">Angular</span>
-                    <span class="bg-purple-500/5 border border-purple-500/10 px-2 py-1 rounded">Azure DevOps</span>
-                    <span class="bg-purple-500/5 border border-purple-500/10 px-2 py-1 rounded">Graph API</span>
-                </div>
             </div>
 
             <div class="relative pl-10 border-l-2 border-slate-800 hover:border-cyan-500 transition-colors duration-500">
@@ -111,51 +163,19 @@
                 </div>
                 <p class="text-lg font-semibold text-cyan-400 mb-4 italic">Synapsys Pvt Ltd</p>
                 <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                    Contributed to the full-stack development of fintech and banking applications like DFCC Virtual Wallet and MAB. Implemented RabbitMQ for messaging and Redis for caching strategies.
+                    Contributed to fintech apps like DFCC Virtual Wallet and MAB. Specialized in high-performance messaging with RabbitMQ and caching with Redis.
                 </p>
-                <div class="flex flex-wrap gap-2 text-[10px] font-bold text-cyan-400 uppercase">
-                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">Fintech</span>
-                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">RabbitMQ</span>
-                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">Redis</span>
-                    <span class="bg-cyan-500/5 border border-cyan-500/20 px-2 py-1 rounded">React JS</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-24 max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-white mb-16 text-center tracking-widest uppercase italic">Tech Stack</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
-            <div class="glass p-8 rounded-3xl skill-card group">
-                <i class="fab fa-microsoft text-4xl text-blue-400 mb-4 transition group-hover:scale-110"></i>
-                <p class="text-white font-bold text-sm">.NET Core</p>
-            </div>
-            <div class="glass p-8 rounded-3xl skill-card group">
-                <i class="fab fa-angular text-4xl text-red-500 mb-4 transition group-hover:scale-110"></i>
-                <p class="text-white font-bold text-sm">Angular</p>
-            </div>
-            <div class="glass p-8 rounded-3xl skill-card group">
-                <i class="fas fa-cloud text-4xl text-cyan-400 mb-4 transition group-hover:scale-110"></i>
-                <p class="text-white font-bold text-sm">Azure Cloud</p>
-            </div>
-            <div class="glass p-8 rounded-3xl skill-card group">
-                <i class="fas fa-database text-4xl text-orange-400 mb-4 transition group-hover:scale-110"></i>
-                <p class="text-white font-bold text-sm">SQL Server</p>
-            </div>
-            <div class="glass p-8 rounded-3xl skill-card group">
-                <i class="fab fa-react text-4xl text-cyan-300 mb-4 transition group-hover:scale-110"></i>
-                <p class="text-white font-bold text-sm">React JS</p>
             </div>
         </div>
     </section>
 
     <footer class="py-20 text-center border-t border-slate-900">
-        <div class="flex justify-center space-x-8 mb-8 text-2xl">
+        <div class="flex justify-center space-x-10 mb-10 text-2xl">
             <a href="mailto:sampathruwan20@gmail.com" class="hover:text-blue-500 transition"><i class="fas fa-envelope"></i></a>
             <a href="https://github.com/ruwan-dev" target="_blank" class="hover:text-white transition"><i class="fab fa-github"></i></a>
             <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="text-[10px] uppercase tracking-[0.3em] text-slate-600 font-bold">© 2026 Sampath Ruwan Pathirana | Senior Software Engineer</p>
+        <p class="text-[10px] uppercase tracking-[0.4em] text-slate-700 font-bold italic">© 2026 Sampath Ruwan Pathirana | Senior Software Engineer</p>
     </footer>
 
 </body>
